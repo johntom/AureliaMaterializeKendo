@@ -1,0 +1,80 @@
+//   export function getBuildings(userid) {
+//     var url = `http://cm.brookbridgeinc.com:8004/api/buildings/${userid}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+//     return fetch(url).then((res) => res.json())
+//   };
+ 
+
+// export function getBio(username) {
+//     username = username.toLowerCase().trim();
+//     var url = `https://api.github.com/users/${username}`;
+//     return fetch(url).then((res) => res.json())
+//   };
+  
+  
+  
+ export class api {
+   getBuildings(userid) {
+  var url = `http://cm.brookbridgeinc.com:8004/api/buildings/${userid}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+  return fetch(url).then((res) => res.json())
+};
+  
+  getCharts(buildingid) {
+   
+var url = `http://cm.brookbridgeinc.com:8004/api/propertycharts/${buildingid}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+   return fetch(url).then((res) => res.json())
+};
+  
+getChartsDrill(buildingid) {
+var url = `http://cm.brookbridgeinc.com:8004/api/propertycharts2/${buildingid}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+   return fetch(url).then((res) => res.json())
+};
+
+}
+// 'use strict';
+// //   var api;
+// export class api {
+//      var apifetch;
+// apifetch = {
+//   getBuildings: function getBuildings(userid) {
+//     var url = `http://cm.brookbridgeinc.com:8004/api/buildings/${userid}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+//     return fetch(url).then((res) => res.json())
+//   },
+
+//   getCharts: function getCharts(buildingid) {
+
+//     var url = `http://cm.brookbridgeinc.com:8004/api/propertycharts/${buildingid}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+//     return fetch(url).then((res) => res.json())
+//   },
+
+//   getChartsDrill: function getChartsDrill(buildingid) {
+//     var url = `http://cm.brookbridgeinc.com:8004/api/propertycharts/${buildingid}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+//     return fetch(url).then((res) => res.json())
+//   }
+// }
+
+
+//    }
+  
+  
+  
+  // getRepos(username) {
+  //   username = username.toLowerCase().trim();
+  //   var url = `https://api.github.com/users/${username}/repos`;
+  //   return fetch(url).then((res) => res.json())
+  // },
+  // getNotes(username) {
+  //   username = username.toLowerCase().trim();
+  //   var url = `https://native-gh-notetaker.firebaseio.com/${username}.json`;
+  //   return fetch(url).then((res) => res.json())
+  // },
+  // addNote(username, note) {
+  //   username = username.toLowerCase().trim();
+  //   var url = `https://native-gh-notetaker.firebaseio.com/${username}.json`;
+  //   return fetch(url, {
+  //     method: 'post',
+  //     body: JSON.stringify(note)
+  //   }).then((res) => res.json());
+  // }
+
+
+//  module.exports = api;

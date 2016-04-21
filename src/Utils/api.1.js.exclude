@@ -1,0 +1,77 @@
+//https://github.com/adarshpastakia/aurelia-ui-framework/blob/source/framework/utils/ui-model.ts#L28
+import {HttpClient} from 'aurelia-fetch-client';
+import 'fetch';
+// @inject(HttpClient)
+export class  api {
+ 
+
+
+  getBuildings(userid) {
+    var url = `http://cm.brookbridgeinc.com:8004/api/buildings/${userid}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+    return fetch(url).then((res) => res.json())
+       
+  };
+
+  getCharts(buildingid) {
+    var url = `http://cm.brookbridgeinc.com:8004/api/propertycharts/${buildingid}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+    return fetch(url).then((res) => res.json())
+  };
+
+  getChartsDrill(buildingid) {
+    var url = `http://cm.brookbridgeinc.com:8004/api/propertycharts2/${buildingid}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+    return fetch(url).then((res) => res.json())
+  };
+
+  getStatus(buildingid) {
+    var url = `http://cm.brookbridgeinc.com:8004/api/projstatusreport/${buildingid}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+    return fetch(url).then((res) => res.json())
+  };
+
+  getStatusgroup(buildingid) {
+    var url = `http://cm.brookbridgeinc.com:8004/api/projstatusgroup/${buildingid}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+    return fetch(url).then((res) => res.json())
+  };
+
+  getFillings(proj) {
+    var url = `http://cm.brookbridgeinc.com:8004/api/filingdetails/${proj}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+    return fetch(url).then((res) => res.json())
+  };
+
+  getprojDocs(proj) {
+    var url = `http://cm.brookbridgeinc.com:8004/api/projdocs/${proj}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+    return fetch(url).then((res) => res.json())
+  };
+
+  getpropertyDocs(proj) {
+    var url = `http://cm.brookbridgeinc.com:8004/api/propertydocs/${proj}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+    return fetch(url).then((res) => res.json())
+  };
+
+  getprojStatus(buildingid) {
+    // should rename api
+    var url = `http://cm.brookbridgeinc.com:8004/api/projstatus/${buildingid}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+    return fetch(url).then((res) => res.json())
+  };
+
+  getpropViolationsecb(buildingid) {
+    // should rename api
+    var url = `http://cm.brookbridgeinc.com:8004/api/propviolationsecb/${buildingid}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+    return fetch(url).then((res) => res.json())
+  };
+
+  getpropViolationsdob(buildingid) {
+    // should rename api
+    var url = `http://cm.brookbridgeinc.com:8004/api/propviolationsdob/${buildingid}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+    return fetch(url).then((res) => res.json())
+  };
+
+  getBuildingdocs(buildingid) {
+    // should rename api
+    var url = `http://cm.brookbridgeinc.com:8004/api/findbuildingdocs/${buildingid}?token=eyJhbGciOiJIUzI1NiJ9.NTNmMTY3NjllZTk5YTBmMDFlYWM0N2Q4.cx_Qv913lp4Q7lj-QsQUJ8w4DdDM16SRv3_BzraUPrc`;
+    return fetch(url).then((res) => res.json())
+  };
+
+
+
+}
+
